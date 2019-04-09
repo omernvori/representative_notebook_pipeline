@@ -23,6 +23,7 @@ def model(australian_rain_df):
     results_pd = pd.DataFrame(data = results)
     models = ['Tree', 'Random forest']
     # split to training data and test data
+    print (australian_rain_df.columns)
     tr_x, tr_y, te_x, te_y = tr_te_split(australian_rain_df, 'RainTomorrow', 'Year', 2014)
     for kind in models:
         start = time.time()
