@@ -69,3 +69,6 @@ def cleanup(df):
 	num_cols = df.columns[df.dtypes == 'float64']
 	cat_cols = df.columns[df.dtypes == 'object'][1:]
 	return cat_cols, num_cols, df
+
+def main():
+	pass
