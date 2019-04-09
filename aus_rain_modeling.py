@@ -17,7 +17,7 @@ def calc_misclass_error(pred, target):
     return error
 
 
-def model():
+def model(australian_rain_df):
     feat_importance = {}
     results = {'Model': ['-'], 'Training misclassification': ['-'], 'Test misclassification': ['-'], 'Runtime': ['-']}
     results_pd = pd.DataFrame(data = results)
