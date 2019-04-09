@@ -1,6 +1,8 @@
 from datetime import datetime
 import scipy.stats
 import pandas as pd
+import warnings
+warnings.filterwarnings('ignore')
 
 def extract_year_mon_day_cols_from_date_col(df):
     df['Year'], df['Month'], df['Day'] = df['Date'].dt.year, df['Date'].dt.month, df['Date'].dt.day
