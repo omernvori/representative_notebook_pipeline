@@ -68,6 +68,8 @@ def cleanup(df):
 	df = remove_miss_col_with_bigger_than_share(df, 0.35)
 	df = wrapper_median_mode_df(df)
 	df = if_no_rainToday_zero_rainfall(df)
+	df = transform_yes_no_col_to_binary(df, 'RainToday')
+	df = transform_yes_no_col_to_binary(df, 'RainTomorrow')
 	num_cols = df.columns[df.dtypes == 'float64']
 	cat_cols = df.columns[df.dtypes == 'object'][1:]
 	return cat_cols, num_cols, df
